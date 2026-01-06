@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/style.css">
+<title>Product Page with Modern Navbar</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">નામકરણ કરી દેવું</div>
+        <ul class="nav-links">
+            <li><a href="/Product/product.html">Products</a></li>
+            <li><a href="#">Categories</a></li>
+        </ul>
+    </nav>
+
+    <h1>Product Management</h1>
+    <button class="add-btn" onclick="openAddForm()">+ Add New Product</button>
+
+    <div class="products" id="productList"></div>
+
+    <div class="overlay" id="overlay">
+        <div class="form-box">
+            <h3 id="formTitle">Product Details</h3>
+            <input id="name" placeholder="Product Name">
+            <select id="category" onchange="updateSub()">
+                <option value="">Category</option>
+                <option>Electronics</option>
+                <option>Fashion</option>
+                <option>Home</option>
+            </select>
+            <select id="subcategory">
+                <option value="">Select Category First</option>
+            </select>
+            <textarea id="desc" placeholder="Description" rows="3"></textarea>
+            <input id="price" type="number" placeholder="Price">
+            <input id="image" type="file">
+            
+            <button class="submit" onclick="saveProduct()">Save Product</button>
+            <button class="cancel" onclick="closeForm()">Cancel</button>
+        </div>
+    </div>
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
